@@ -22,7 +22,7 @@ export default function HomePage() {
       style={{
         minHeight: "100vh",
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.9)), url('/IMG_1215.jpeg')",
+          "linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.88)), url('/warren/IMG_1215.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -76,7 +76,7 @@ export default function HomePage() {
             }}
           >
             Eighty years of wisdom, hard work, farm sense, classroom stories,
-            legendary dad behavior, and full certified GOAT status.
+            legendary dad behavior, and fully certified GOAT status.
           </p>
 
           <div
@@ -107,21 +107,47 @@ export default function HomePage() {
             </p>
           </div>
 
-          <a
-            href="#photos"
+          <div
             style={{
-              display: "inline-block",
-              background: "#facc15",
-              color: "black",
-              textDecoration: "none",
-              padding: "16px 28px",
-              borderRadius: 999,
-              fontWeight: 900,
-              boxShadow: "0 18px 45px rgba(0,0,0,0.45)",
+              display: "flex",
+              gap: 16,
+              justifyContent: "center",
+              flexWrap: "wrap",
+              marginTop: 28,
             }}
           >
-            Scroll Warren Memories
-          </a>
+            <a
+              href="#rsvp"
+              style={{
+                display: "inline-block",
+                background: "#facc15",
+                color: "black",
+                textDecoration: "none",
+                padding: "16px 28px",
+                borderRadius: 999,
+                fontWeight: 900,
+                boxShadow: "0 18px 45px rgba(0,0,0,0.45)",
+              }}
+            >
+              RSVP for Warren’s Party
+            </a>
+
+            <a
+              href="#photos"
+              style={{
+                display: "inline-block",
+                border: "2px solid rgba(255,255,255,0.25)",
+                color: "white",
+                textDecoration: "none",
+                padding: "16px 28px",
+                borderRadius: 999,
+                fontWeight: 800,
+                background: "rgba(0,0,0,0.4)",
+              }}
+            >
+              View Memories
+            </a>
+          </div>
         </div>
       </section>
 
@@ -188,9 +214,67 @@ export default function HomePage() {
       </section>
 
       <section
+        id="rsvp"
+        style={{
+          padding: "70px 18px",
+          background: "rgba(10,8,5,0.92)",
+          textAlign: "center",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 720,
+            margin: "0 auto",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.12)",
+            borderRadius: 28,
+            padding: 36,
+          }}
+        >
+          <h2
+            style={{
+              color: "#facc15",
+              fontSize: "clamp(2rem, 6vw, 3.5rem)",
+              marginTop: 0,
+            }}
+          >
+            RSVP
+          </h2>
+
+          <p
+            style={{
+              color: "#e5e7eb",
+              lineHeight: 1.7,
+              fontSize: "1.1rem",
+            }}
+          >
+            We’d love to celebrate Warren with you.
+            More details coming soon.
+          </p>
+
+          <a
+            href="mailto:kkahler190@gmail.com?subject=Warren%2080%20RSVP"
+            style={{
+              display: "inline-block",
+              marginTop: 24,
+              background: "#facc15",
+              color: "black",
+              textDecoration: "none",
+              padding: "16px 32px",
+              borderRadius: 999,
+              fontWeight: 900,
+              fontSize: "1rem",
+            }}
+          >
+            RSVP by Email
+          </a>
+        </div>
+      </section>
+
+      <section
         style={{
           padding: "54px 18px 80px",
-          background: "rgba(10,8,5,0.9)",
+          background: "rgba(10,8,5,0.95)",
         }}
       >
         <div
@@ -230,6 +314,7 @@ export default function HomePage() {
               >
                 {title}
               </p>
+
               <p
                 style={{
                   color: "#facc15",
