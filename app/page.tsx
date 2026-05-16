@@ -59,7 +59,7 @@ export default function HomePage() {
               fontWeight: 900,
             }}
           >
-            The Original Ag Teacher
+            The Ag Teacher, The Dad, The Legend
           </p>
 
           <h1
@@ -87,7 +87,9 @@ export default function HomePage() {
           >
             Eighty years of wisdom, hard work, classroom stories,
             farm sense, legendary dad behavior, and fully certified
-            GOAT status.
+            GOAT status. 
+            Join us in a T(R)oast to starting 
+            the 8th decade of Warren!  
           </p>
 
           <div
@@ -185,7 +187,7 @@ export default function HomePage() {
               textAlign: "center",
             }}
           >
-            Memories of a Legend
+            The Legend 
           </h2>
 
           <p
