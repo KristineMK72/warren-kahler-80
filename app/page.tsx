@@ -1,4 +1,5 @@
 const photos = [
+  "/warren/IMG_1209.jpeg",
   "/warren/IMG_1192.jpeg",
   "/warren/IMG_1193.jpeg",
   "/warren/IMG_1194.jpeg",
@@ -13,7 +14,7 @@ const photos = [
   "/warren/IMG_1206.jpeg",
   "/warren/IMG_1207.jpeg",
   "/warren/IMG_1208.jpeg",
-  "/warren/IMG_1209.jpeg",
+  
 ];
 
 export default function HomePage() {
