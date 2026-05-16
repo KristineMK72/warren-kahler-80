@@ -21,8 +21,7 @@ export default function HomePage() {
     <main
       style={{
         minHeight: "100vh",
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.88)), url('/warren/IMG_1215.jpeg')",
+        backgroundImage: "url('/warren/IMG_1215.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -37,10 +36,21 @@ export default function HomePage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          textAlign: "center",
         }}
       >
-        <div style={{ maxWidth: 1100, width: "100%" }}>
+        <div
+          style={{
+            maxWidth: 1100,
+            width: "100%",
+            background: "rgba(0,0,0,0.48)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255,255,255,0.08)",
+            borderRadius: 36,
+            padding: "42px 24px",
+            boxShadow: "0 25px 80px rgba(0,0,0,0.45)",
+            textAlign: "center",
+          }}
+        >
           <p
             style={{
               color: "#facc15",
@@ -75,8 +85,9 @@ export default function HomePage() {
               color: "#f3f4f6",
             }}
           >
-            Eighty years of wisdom, hard work, farm sense, classroom stories,
-            legendary dad behavior, and fully certified GOAT status.
+            Eighty years of wisdom, hard work, classroom stories,
+            farm sense, legendary dad behavior, and fully certified
+            GOAT status.
           </p>
 
           <div
@@ -87,7 +98,6 @@ export default function HomePage() {
               border: "1px solid rgba(250,204,21,0.5)",
               borderRadius: 28,
               padding: 24,
-              boxShadow: "0 25px 70px rgba(0,0,0,0.45)",
             }}
           >
             <h2 style={{ margin: 0, color: "#facc15", fontSize: "1.8rem" }}>
@@ -126,7 +136,6 @@ export default function HomePage() {
                 padding: "16px 28px",
                 borderRadius: 999,
                 fontWeight: 900,
-                boxShadow: "0 18px 45px rgba(0,0,0,0.45)",
               }}
             >
               RSVP for Warren’s Party
@@ -142,7 +151,7 @@ export default function HomePage() {
                 padding: "16px 28px",
                 borderRadius: 999,
                 fontWeight: 800,
-                background: "rgba(0,0,0,0.4)",
+                background: "rgba(0,0,0,0.45)",
               }}
             >
               View Memories
@@ -155,21 +164,37 @@ export default function HomePage() {
         id="photos"
         style={{
           padding: "30px 18px 70px",
-          background: "rgba(0,0,0,0.72)",
         }}
       >
-        <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+        <div
+          style={{
+            maxWidth: 1100,
+            margin: "0 auto",
+            background: "rgba(0,0,0,0.52)",
+            backdropFilter: "blur(10px)",
+            borderRadius: 36,
+            padding: "34px 20px",
+            border: "1px solid rgba(255,255,255,0.08)",
+          }}
+        >
           <h2
             style={{
               fontSize: "clamp(2rem, 7vw, 4rem)",
               marginBottom: 10,
               color: "#facc15",
+              textAlign: "center",
             }}
           >
             Memories of a Legend
           </h2>
 
-          <p style={{ color: "#d1d5db", marginBottom: 28 }}>
+          <p
+            style={{
+              color: "#d1d5db",
+              marginBottom: 28,
+              textAlign: "center",
+            }}
+          >
             Swipe sideways to scroll through Warren’s photos.
           </p>
 
@@ -217,18 +242,18 @@ export default function HomePage() {
         id="rsvp"
         style={{
           padding: "70px 18px",
-          background: "rgba(10,8,5,0.92)",
-          textAlign: "center",
         }}
       >
         <div
           style={{
             maxWidth: 720,
             margin: "0 auto",
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.12)",
+            background: "rgba(0,0,0,0.55)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255,255,255,0.1)",
             borderRadius: 28,
             padding: 36,
+            textAlign: "center",
           }}
         >
           <h2
@@ -274,7 +299,6 @@ export default function HomePage() {
       <section
         style={{
           padding: "54px 18px 80px",
-          background: "rgba(10,8,5,0.95)",
         }}
       >
         <div
@@ -297,8 +321,9 @@ export default function HomePage() {
             <div
               key={title}
               style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.12)",
+                background: "rgba(0,0,0,0.52)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: 22,
                 padding: 22,
                 textAlign: "center",
@@ -328,7 +353,13 @@ export default function HomePage() {
           ))}
         </div>
 
-        <p style={{ textAlign: "center", marginTop: 48, color: "#d1d5db" }}>
+        <p
+          style={{
+            textAlign: "center",
+            marginTop: 48,
+            color: "#d1d5db",
+          }}
+        >
           Built with love, mild chaos, and full GOAT respect for Warren Kahler.
         </p>
       </section>
