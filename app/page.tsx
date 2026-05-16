@@ -156,7 +156,7 @@ export default function HomePage() {
                 background: "rgba(0,0,0,0.45)",
               }}
             >
-              View Memories
+              📸
             </a>
           </div>
         </div>
@@ -275,7 +275,7 @@ export default function HomePage() {
               fontSize: "1.1rem",
             }}
           >
-            We’d love to celebrate Warren with you.
+            We’d love for you to join us for the party!
             More details coming soon.
           </p>
 
