@@ -1,23 +1,23 @@
 const photos = [
   "/warren/IMG_1209.jpeg",
-  "/warren/IMG_1192.jpeg",
-  "/warren/IMG_1193.jpeg",
-  "/warren/IMG_1194.jpeg",
-  "/warren/IMG_1195.jpeg",
-  "/warren/IMG_1199.jpeg",
-  "/warren/IMG_1200.jpeg",
-  "/warren/IMG_1201.jpeg",
-  "/warren/IMG_1202.jpeg",
-  "/warren/IMG_1203.jpeg",
-  "/warren/IMG_1204.jpeg",
-  "/warren/IMG_1205.jpeg",
-  "/warren/IMG_1206.jpeg",
-  "/warren/IMG_1207.jpeg",
-  "/warren/IMG_1208.jpeg",
 ];
 
 const mapLink =
   "https://www.google.com/maps/search/?api=1&query=124%20Front%20St%2C%20Brainerd%2C%20MN%2056401";
+
+const confetti = [
+  "12%", "24%", "36%", "48%", "60%", "72%", "84%", "96%",
+];
+
+const sparkles = [
+  ["8%", "18%"],
+  ["18%", "72%"],
+  ["31%", "34%"],
+  ["48%", "82%"],
+  ["64%", "22%"],
+  ["79%", "58%"],
+  ["90%", "40%"],
+];
 
 export default function HomePage() {
   return (
@@ -30,8 +30,79 @@ export default function HomePage() {
         backgroundAttachment: "fixed",
         color: "white",
         fontFamily: "Arial, sans-serif",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+      <style>{`
+        @keyframes fall {
+          0% { transform: translateY(-20vh) rotate(0deg); opacity: 0; }
+          10% { opacity: 1; }
+          100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
+        }
+
+        @keyframes twinkle {
+          0%, 100% { opacity: .25; transform: scale(.85) rotate(0deg); }
+          50% { opacity: 1; transform: scale(1.25) rotate(20deg); }
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+      `}</style>
+
+      <div
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          inset: 0,
+          pointerEvents: "none",
+          zIndex: 1,
+          overflow: "hidden",
+        }}
+      >
+        {confetti.map((left, index) => (
+          <span
+            key={left}
+            style={{
+              position: "absolute",
+              top: "-30px",
+              left,
+              width: 10,
+              height: 18,
+              borderRadius: 3,
+              background:
+                index % 3 === 0
+                  ? "#facc15"
+                  : index % 3 === 1
+                  ? "#ffffff"
+                  : "#fb923c",
+              animation: `fall ${7 + index}s linear infinite`,
+              animationDelay: `${index * 0.7}s`,
+              opacity: 0.8,
+            }}
+          />
+        ))}
+
+        {sparkles.map(([left, top], index) => (
+          <span
+            key={`${left}-${top}`}
+            style={{
+              position: "absolute",
+              left,
+              top,
+              color: "#facc15",
+              fontSize: index % 2 === 0 ? 24 : 18,
+              animation: `twinkle ${2.2 + index * 0.25}s ease-in-out infinite`,
+              animationDelay: `${index * 0.35}s`,
+              textShadow: "0 0 18px rgba(250,204,21,0.9)",
+            }}
+          >
+            ✨
+          </span>
+        ))}
+      </div>
+
       <section
         style={{
           minHeight: "100vh",
@@ -39,6 +110,8 @@ export default function HomePage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         <div
@@ -189,7 +262,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="photos" style={{ padding: "30px 18px 70px" }}>
+      <section
+        id="photos"
+        style={{
+          padding: "30px 18px 70px",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
         <div
           style={{
             maxWidth: 1100,
@@ -262,7 +342,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="rsvp" style={{ padding: "70px 18px" }}>
+      <section
+        id="rsvp"
+        style={{
+          padding: "70px 18px",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
         <div
           style={{
             maxWidth: 720,
@@ -315,7 +402,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section style={{ padding: "54px 18px 80px" }}>
+      <section
+        style={{
+          padding: "54px 18px 80px",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
         <div
           style={{
             maxWidth: 1100,
