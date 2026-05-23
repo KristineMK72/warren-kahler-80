@@ -3,27 +3,27 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://warren-kahler-80.vercel.app"),
 
-  title: "Warren Kahler Turns 80 🐐",
+  title: "Tony Kahler Birthday Party 🎉",
 
   description:
-    "Celebrate Warren Kahler — ag teacher, legend, and certified GOAT.",
+    "Join us to celebrate Tony Kahler — ag teacher, legend, and certified GOAT.",
 
   openGraph: {
-    title: "Warren Kahler Turns 80 🐐",
+    title: "It's a Party! 🎉",
 
     description:
-      "The original ag teacher. The family GOAT. Join us to celebrate Warren!",
+      "Celebrating Tony Kahler — ag teacher, family legend, and FFA icon.",
 
     url: "https://warren-kahler-80.vercel.app",
 
-    siteName: "Warren Kahler Turns 80",
+    siteName: "Tony Kahler Birthday Party",
 
     images: [
       {
-        url: "/og-warren.jpg",
+        url: "/warren/IMG_0144.jpeg",
         width: 1200,
         height: 630,
-        alt: "Mr. Tony Kahler Ag Teacher graphic",
+        alt: "Tony Kahler birthday party graphic",
       },
     ],
 
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Warren Kahler Turns 80 🐐",
+    title: "It's a Party! 🎉",
 
     description:
-      "The original ag teacher. The family GOAT.",
+      "Celebrating Tony Kahler — ag teacher, family legend, and FFA icon.",
 
-    images: ["/og-warren.jpg"],
+    images: ["/warren/IMG_0144.jpeg"],
   },
 };
 
