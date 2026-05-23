@@ -406,7 +406,7 @@ export default function HomePage() {
           </p>
 
           <a
-            href="mailto:kkahler190@gmail.com?subject=Warren%2080%20RSVP%20%2B%20Roast%2FToast"
+            href="/rsvp"
             style={{
               display: "inline-block",
               marginTop: 30,
