@@ -20,7 +20,7 @@ export default function HomePage() {
     <main
       style={{
         minHeight: "100vh",
-        backgroundImage: "url('/warren/IMG_0121.png')",
+        backgroundImage: "url('/warren/IMG_0121.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
