@@ -1,13 +1,9 @@
-const photos = [
-  "/warren/IMG_1209.jpeg",
-];
+const photos = ["/warren/IMG_1209.jpeg"];
 
 const mapLink =
   "https://www.google.com/maps/search/?api=1&query=124%20Front%20St%2C%20Brainerd%2C%20MN%2056401";
 
-const confetti = [
-  "12%", "24%", "36%", "48%", "60%", "72%", "84%", "96%",
-];
+const confetti = ["8%", "18%", "28%", "38%", "48%", "58%", "68%", "78%", "88%", "96%"];
 
 const sparkles = [
   ["8%", "18%"],
@@ -24,7 +20,7 @@ export default function HomePage() {
     <main
       style={{
         minHeight: "100vh",
-        backgroundImage: "url('/warren/IMG_1215.jpeg')",
+        backgroundImage: "url('/warren/IMG_0121.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -35,6 +31,8 @@ export default function HomePage() {
       }}
     >
       <style>{`
+        html { scroll-behavior: smooth; }
+
         @keyframes fall {
           0% { transform: translateY(-20vh) rotate(0deg); opacity: 0; }
           10% { opacity: 1; }
@@ -44,10 +42,6 @@ export default function HomePage() {
         @keyframes twinkle {
           0%, 100% { opacity: .25; transform: scale(.85) rotate(0deg); }
           50% { opacity: 1; transform: scale(1.25) rotate(20deg); }
-        }
-
-        html {
-          scroll-behavior: smooth;
         }
       `}</style>
 
@@ -78,7 +72,7 @@ export default function HomePage() {
                   ? "#ffffff"
                   : "#fb923c",
               animation: `fall ${7 + index}s linear infinite`,
-              animationDelay: `${index * 0.7}s`,
+              animationDelay: `${index * 0.55}s`,
               opacity: 0.8,
             }}
           />
@@ -118,7 +112,7 @@ export default function HomePage() {
           style={{
             maxWidth: 1100,
             width: "100%",
-            background: "rgba(0,0,0,0.48)",
+            background: "rgba(0,0,0,0.5)",
             backdropFilter: "blur(10px)",
             border: "1px solid rgba(255,255,255,0.08)",
             borderRadius: 36,
@@ -171,8 +165,8 @@ export default function HomePage() {
           <div
             style={{
               margin: "34px auto",
-              maxWidth: 620,
-              background: "rgba(0,0,0,0.62)",
+              maxWidth: 640,
+              background: "rgba(0,0,0,0.64)",
               border: "1px solid rgba(250,204,21,0.5)",
               borderRadius: 28,
               padding: 24,
@@ -183,11 +177,15 @@ export default function HomePage() {
             </h2>
 
             <p style={{ fontSize: "1.15rem", margin: "14px 0 0" }}>
-              <strong>Date:</strong> TBD — July 18th or 19th
+              <strong>Date:</strong> Friday, July 18th
             </p>
 
             <p style={{ fontSize: "1.15rem", margin: "10px 0 0" }}>
-              <strong>Location:</strong> Eagles Club, Brainerd, MN
+              <strong>Time:</strong> 1:00 PM – 4:00 PM
+            </p>
+
+            <p style={{ fontSize: "1.15rem", margin: "10px 0 0" }}>
+              <strong>Location:</strong> Eagles Club — Downstairs, Brainerd, MN
             </p>
 
             <p
@@ -198,6 +196,12 @@ export default function HomePage() {
               }}
             >
               <strong>Address:</strong> 124 Front St, Brainerd, MN 56401
+            </p>
+
+            <p style={{ marginTop: 16, color: "#f3f4f6", lineHeight: 1.6 }}>
+              Join us for an afternoon celebrating Warren’s 80th birthday with
+              stories, laughs, memories, and a proper T(R)oast honoring the ag
+              teacher legend himself.
             </p>
 
             <a
@@ -240,7 +244,7 @@ export default function HomePage() {
                 fontWeight: 900,
               }}
             >
-              RSVP for Warren’s Party
+              RSVP + Roast / Toast
             </a>
 
             <a
@@ -292,13 +296,7 @@ export default function HomePage() {
             The Legend
           </h2>
 
-          <p
-            style={{
-              color: "#d1d5db",
-              marginBottom: 28,
-              textAlign: "center",
-            }}
-          >
+          <p style={{ color: "#d1d5db", marginBottom: 28, textAlign: "center" }}>
             Swipe sideways to scroll through Warren’s photos.
           </p>
 
@@ -352,14 +350,15 @@ export default function HomePage() {
       >
         <div
           style={{
-            maxWidth: 720,
+            maxWidth: 760,
             margin: "0 auto",
-            background: "rgba(0,0,0,0.55)",
+            background: "rgba(0,0,0,0.58)",
             backdropFilter: "blur(10px)",
             border: "1px solid rgba(255,255,255,0.1)",
             borderRadius: 28,
             padding: 36,
             textAlign: "center",
+            boxShadow: "0 25px 80px rgba(0,0,0,0.45)",
           }}
         >
           <h2
@@ -367,48 +366,53 @@ export default function HomePage() {
               color: "#facc15",
               fontSize: "clamp(2rem, 6vw, 3.5rem)",
               marginTop: 0,
+              marginBottom: 12,
             }}
           >
-            RSVP
+            RSVP + Roast / Toast 🍻🐐
           </h2>
 
           <p
             style={{
-              color: "#e5e7eb",
-              lineHeight: 1.7,
-              fontSize: "1.1rem",
+              color: "#f3f4f6",
+              lineHeight: 1.8,
+              fontSize: "1.12rem",
+              maxWidth: 620,
+              margin: "0 auto",
             }}
           >
-            We’d love for you to join us for the party! More details coming
-            soon.
+            We’d love for you to join us in celebrating Warren’s 80th birthday!
+            <br />
+            <br />
+            And yes — Warren roasts are strongly encouraged. The wittier the
+            better. 😂
+            <br />
+            <br />
+            Share your favorite story, roast, toast, legendary Warren moment,
+            or classic “ag teacher wisdom” with your RSVP.
           </p>
 
           <a
-            href="mailto:kkahler190@gmail.com?subject=Warren%2080%20RSVP"
+            href="mailto:kkahler190@gmail.com?subject=Warren%2080%20RSVP%20%2B%20Roast%2FToast"
             style={{
               display: "inline-block",
-              marginTop: 24,
+              marginTop: 30,
               background: "#facc15",
               color: "black",
               textDecoration: "none",
-              padding: "16px 32px",
+              padding: "18px 34px",
               borderRadius: 999,
               fontWeight: 900,
               fontSize: "1rem",
+              boxShadow: "0 12px 35px rgba(0,0,0,0.4)",
             }}
           >
-            RSVP by Email
+            RSVP + Submit Your Roast / Toast 🐐
           </a>
         </div>
       </section>
 
-      <section
-        style={{
-          padding: "54px 18px 80px",
-          position: "relative",
-          zIndex: 2,
-        }}
-      >
+      <section style={{ padding: "54px 18px 80px", position: "relative", zIndex: 2 }}>
         <div
           style={{
             maxWidth: 1100,
@@ -461,14 +465,8 @@ export default function HomePage() {
           ))}
         </div>
 
-        <p
-          style={{
-            textAlign: "center",
-            marginTop: 48,
-            color: "#d1d5db",
-          }}
-        >
-          Built with love, mild chaos, and full GOAT respect for Warren Kahler.
+        <p style={{ textAlign: "center", marginTop: 48, color: "#d1d5db" }}>
+          Schemed with love by Kris, Tom, Mike, Em, and Steve — aka the Kahler Kids.
         </p>
       </section>
     </main>
