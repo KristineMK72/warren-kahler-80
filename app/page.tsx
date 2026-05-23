@@ -465,7 +465,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <p style={{ textAlign: "center", marginTop: 48, color: "#d1d5db" }}>
+        <p style={{ textAlign: "center", marginTop: 48, color: "#000000" }}>
           Schemed with love by Kris, Tom, Mike, Em, and Steve — aka the Kahler Kids.
         </p>
       </section>
