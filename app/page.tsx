@@ -3,17 +3,38 @@ const photos = ["/warren/IMG_1209.jpeg"];
 const mapLink =
   "https://www.google.com/maps/search/?api=1&query=124%20Front%20St%2C%20Brainerd%2C%20MN%2056401";
 
-const confetti = ["8%", "18%", "28%", "38%", "48%", "58%", "68%", "78%", "88%", "96%"];
+const confetti = [
+  "4%",
+  "10%",
+  "16%",
+  "22%",
+  "28%",
+  "34%",
+  "40%",
+  "46%",
+  "52%",
+  "58%",
+  "64%",
+  "70%",
+  "76%",
+  "82%",
+  "88%",
+  "94%",
+];
 
 const sparkles = [
-  ["8%", "18%"],
-  ["18%", "72%"],
-  ["31%", "34%"],
-  ["48%", "82%"],
-  ["64%", "22%"],
-  ["79%", "58%"],
-  ["90%", "40%"],
+  ["6%", "12%"],
+  ["14%", "68%"],
+  ["24%", "28%"],
+  ["36%", "82%"],
+  ["50%", "18%"],
+  ["62%", "58%"],
+  ["74%", "34%"],
+  ["86%", "74%"],
+  ["94%", "42%"],
 ];
+
+const sparkleColors = ["#ef4444", "#ffffff", "#2563eb", "#facc15"];
 
 export default function HomePage() {
   return (
@@ -35,13 +56,19 @@ export default function HomePage() {
 
         @keyframes fall {
           0% { transform: translateY(-20vh) rotate(0deg); opacity: 0; }
-          10% { opacity: 1; }
-          100% { transform: translateY(120vh) rotate(720deg); opacity: 0; }
+          8% { opacity: 1; }
+          100% { transform: translateY(125vh) rotate(900deg); opacity: 0; }
         }
 
         @keyframes twinkle {
-          0%, 100% { opacity: .25; transform: scale(.85) rotate(0deg); }
-          50% { opacity: 1; transform: scale(1.25) rotate(20deg); }
+          0%, 100% { opacity: .45; transform: scale(.85) rotate(0deg); }
+          50% { opacity: 1; transform: scale(1.45) rotate(25deg); }
+        }
+
+        @media (max-width: 700px) {
+          main {
+            background-attachment: scroll !important;
+          }
         }
       `}</style>
 
@@ -60,20 +87,21 @@ export default function HomePage() {
             key={left}
             style={{
               position: "absolute",
-              top: "-30px",
+              top: "-40px",
               left,
-              width: 10,
-              height: 18,
-              borderRadius: 3,
+              width: 14,
+              height: 24,
+              borderRadius: 4,
               background:
                 index % 3 === 0
-                  ? "#facc15"
+                  ? "#ef4444"
                   : index % 3 === 1
                   ? "#ffffff"
-                  : "#fb923c",
-              animation: `fall ${7 + index}s linear infinite`,
-              animationDelay: `${index * 0.55}s`,
-              opacity: 0.8,
+                  : "#2563eb",
+              boxShadow: "0 0 14px rgba(255,255,255,0.55)",
+              animation: `fall ${6 + index * 0.45}s linear infinite`,
+              animationDelay: `${index * 0.35}s`,
+              opacity: 0.95,
             }}
           />
         ))}
@@ -85,14 +113,19 @@ export default function HomePage() {
               position: "absolute",
               left,
               top,
-              color: "#facc15",
-              fontSize: index % 2 === 0 ? 24 : 18,
-              animation: `twinkle ${2.2 + index * 0.25}s ease-in-out infinite`,
-              animationDelay: `${index * 0.35}s`,
-              textShadow: "0 0 18px rgba(250,204,21,0.9)",
+              color: sparkleColors[index % sparkleColors.length],
+              fontSize: index % 2 === 0 ? 34 : 26,
+              fontWeight: 900,
+              animation: `twinkle ${1.8 + index * 0.18}s ease-in-out infinite`,
+              animationDelay: `${index * 0.25}s`,
+              textShadow: `
+                0 0 8px currentColor,
+                0 0 18px currentColor,
+                0 0 32px rgba(255,255,255,0.9)
+              `,
             }}
           >
-            ✨
+            ✦
           </span>
         ))}
       </div>
@@ -188,13 +221,7 @@ export default function HomePage() {
               <strong>Location:</strong> Eagles Club — Downstairs, Brainerd, MN
             </p>
 
-            <p
-              style={{
-                fontSize: "1.05rem",
-                margin: "10px 0 0",
-                opacity: 0.92,
-              }}
-            >
+            <p style={{ fontSize: "1.05rem", margin: "10px 0 0", opacity: 0.92 }}>
               <strong>Address:</strong> 124 Front St, Brainerd, MN 56401
             </p>
 
@@ -266,14 +293,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        id="photos"
-        style={{
-          padding: "30px 18px 70px",
-          position: "relative",
-          zIndex: 2,
-        }}
-      >
+      <section id="photos" style={{ padding: "30px 18px 70px", position: "relative", zIndex: 2 }}>
         <div
           style={{
             maxWidth: 1100,
@@ -296,8 +316,8 @@ export default function HomePage() {
             The Legend
           </h2>
 
-          <p style={{ color: "#d1d5db", marginBottom: 28, textAlign: "center" }}>
-            Swipe sideways to scroll through Warren’s photos.
+          <p style={{ color: "#f3f4f6", marginBottom: 28, textAlign: "center" }}>
+            🎉🎂🥳🎊🎁🎈
           </p>
 
           <div
@@ -340,14 +360,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        id="rsvp"
-        style={{
-          padding: "70px 18px",
-          position: "relative",
-          zIndex: 2,
-        }}
-      >
+      <section id="rsvp" style={{ padding: "70px 18px", position: "relative", zIndex: 2 }}>
         <div
           style={{
             maxWidth: 760,
@@ -443,7 +456,7 @@ export default function HomePage() {
             >
               <p
                 style={{
-                  color: "#d1d5db",
+                  color: "#f3f4f6",
                   textTransform: "uppercase",
                   letterSpacing: "0.12em",
                   fontSize: 12,
@@ -452,20 +465,22 @@ export default function HomePage() {
                 {title}
               </p>
 
-              <p
-                style={{
-                  color: "#facc15",
-                  fontSize: "1.7rem",
-                  fontWeight: 900,
-                }}
-              >
+              <p style={{ color: "#facc15", fontSize: "1.7rem", fontWeight: 900 }}>
                 {value}
               </p>
             </div>
           ))}
         </div>
 
-        <p style={{ textAlign: "center", marginTop: 48, color: "#000000" }}>
+        <p
+          style={{
+            textAlign: "center",
+            marginTop: 48,
+            color: "#000000",
+            fontWeight: 800,
+            textShadow: "0 1px 10px rgba(255,255,255,0.7)",
+          }}
+        >
           Schemed with love by Kris, Tom, Mike, Em, and Steve — aka the Kahler Kids.
         </p>
       </section>
