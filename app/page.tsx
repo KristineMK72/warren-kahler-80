@@ -210,7 +210,7 @@ export default function HomePage() {
             </h2>
 
             <p style={{ fontSize: "1.15rem", margin: "14px 0 0" }}>
-              <strong>Date:</strong> Friday, July 18th
+              <strong>Date:</strong> Saturday, July 18th
             </p>
 
             <p style={{ fontSize: "1.15rem", margin: "10px 0 0" }}>
